@@ -1,0 +1,62 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+}
+
+footer {
+  font-size: 0.65rem;
+}
+
+#content_title {
+  &.error {
+    @apply text-red-500 capitalize font-medium;
+  }
+}
+
+.anchor {
+  @apply text-blue-600;
+
+  &:hover {
+    @apply text-blue-700 underline;
+  }
+}
+
+.forecast-hover {
+  @apply border border-transparent flex-1 p-1 text-center flex flex-col;
+  min-width: 65px;
+
+  &:hover {
+    @apply border-gray-300;
+
+    .hidden {
+      @apply block;
+    }
+    .block {
+      @apply hidden;
+    }
+  }
+}
+
+#forecast {
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.forecast-day {
+  @apply rounded-sm px-2 bg-gray-700 text-gray-100;
+  display: inline-block;
+  font-size: 0.65rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.forecast-hour {
+  @apply flex-1 p-1 text-center;
+  min-width: 65px;
+}
